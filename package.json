@@ -1,0 +1,26 @@
+{
+  "name": "prospector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "scrape:crunchbase": "tsx src/scrapers/crunchbase.ts",
+    "scrape:clutch": "tsx src/scrapers/clutch.ts",
+    "mcp": "tsx src/mcp/server.ts",
+    "agent": "tsx src/agent/qualify.ts",
+    "normalize": "tsx src/pipeline/normalize.ts",
+    "finalize": "tsx src/pipeline/finalize.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "playwright": "^1.58.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.2.0"
+  }
+}
