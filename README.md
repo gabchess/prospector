@@ -14,8 +14,6 @@ by a live DNS MX record, for $4.12 of new spend. The run was the proof; this
 pipeline is the product. No lead data ships here: lead lists are personal data, so
 you generate your own (see [`data/README.md`](data/README.md)).
 
-**[Loom walkthrough of the original run](https://www.loom.com/share/320038e70c3b4ba29ad5265a3e83fef3)**
-
 ## Three design calls the first run forced
 
 1. **Measure the source before building on it.** The first Crunchbase scrape of 300
