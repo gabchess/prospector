@@ -28,7 +28,7 @@ property when you add gates. A binary gate can be debugged; a weighted score can
 
 Copy `.env.example` to `.env` and fill in:
 
-- `APIFY_TOKEN` - powers the LinkedIn signal pass. The shipped run cost $4.12.
+- `APIFY_TOKEN` - powers the LinkedIn signal pass. A run costs about $4 in Apify credit.
 
 Two integrations have no key to paste:
 
