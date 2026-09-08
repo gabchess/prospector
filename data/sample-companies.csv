@@ -1,4 +1,4 @@
 name,domain,country,headcount,headcount_raw,headcount_low_edge,headcount_high_edge,headcount_ambiguous,needs_domain_lookup,company_type,funding_usd,source,origin_url
 Acme Outbound Co,acmeoutbound.example,US,25,10 - 49,false,false,true,false,lead_gen_agency,0,clutch,https://clutch.co/profile/example-a
-Northstar Growth Ltd,northstargrowth.example,UK,40,10 - 49,false,false,true,false,digital_marketing_agency,0,clutch,https://clutch.co/profile/example-b
+Harbor Growth Ltd,harborgrowth.example,UK,40,10 - 49,false,false,true,false,digital_marketing_agency,0,clutch,https://clutch.co/profile/example-b
 Beacon Sales Partners,beaconsales.example,CA,15,10 - 49,false,false,true,false,sales_consulting,0,clutch,https://clutch.co/profile/example-c
