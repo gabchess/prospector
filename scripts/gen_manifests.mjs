@@ -26,13 +26,7 @@ const REPO_ROOT = path.resolve(
 const VERSION = "0.2.0";
 
 /** Never shipped, never hashed. */
-const EXCLUDED_DIRS = new Set([
-  "node_modules",
-  ".git",
-  "dist",
-  ".claude",
-  "scripts",
-]);
+const EXCLUDED_DIRS = new Set(["node_modules", ".git", "dist"]);
 
 /** Real-lead shapes and generated outputs never enter a manifest, even when
  * they exist locally. The sample fixture is shipped and IS listed. */
@@ -66,6 +60,7 @@ const DOC_PATHS = [
   "codex/prospector/README.md",
   "codex/prospector/SKILL.md",
   "data/README.md",
+  ".claude/skills/onboard/SKILL.md",
   "docs/EXAMPLE-WALKTHROUGH.md",
   "docs/EXTEND-YOUR-STACK.md",
   "docs/FIRST-RUN.md",
@@ -87,6 +82,8 @@ async function walk(dir, rel = "", out = []) {
       await walk(path.join(dir, entry.name), relPath, out);
     } else if (entry.isFile()) {
       if (EXCLUDED_FILES.has(relPath)) continue;
+      if (relPath.startsWith("data/raw/")) continue;
+      if (relPath.endsWith(".storageState.json")) continue;
       if (relPath === RELEASE_MANIFEST || relPath === DOCUMENTATION_MANIFEST)
         continue;
       out.push(relPath);

@@ -49,6 +49,10 @@
       "sha256": "4cbe3d85f5a83ac094d86f6fb341270daa36f9a3849c1f43bf0697c0ccdca1be"
     },
     {
+      "path": ".claude/skills/onboard/SKILL.md",
+      "sha256": "849d22261b745605198b22d851eea7a18946b863ae8dc0d44fba762c769ee639"
+    },
+    {
       "path": "docs/EXAMPLE-WALKTHROUGH.md",
       "sha256": "78efc12f05d38a3f77b7fcafc94d01e56416577ee919bc38b522db5be4d8f6db"
     },

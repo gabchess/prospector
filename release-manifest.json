@@ -10,6 +10,11 @@
   "license_status": "MIT (code); see LICENSE-STATUS.md",
   "files": [
     {
+      "path": ".claude/skills/onboard/SKILL.md",
+      "sha256": "849d22261b745605198b22d851eea7a18946b863ae8dc0d44fba762c769ee639",
+      "bytes": 2623
+    },
+    {
       "path": ".env.example",
       "sha256": "26a2aceab12fba0dd26f8162a3b896d3e7f96e67a6590204dcc8e0cd806c823a",
       "bytes": 296
@@ -233,6 +238,16 @@
       "path": "pnpm-workspace.yaml",
       "sha256": "ac02d96368617c760f093cfe61fdec64b6244007ab3553e0d6621f706f54a353",
       "bytes": 29
+    },
+    {
+      "path": "scripts/build_zip.mjs",
+      "sha256": "ee008a749ef5407aa4f9d3babc47fa68528c2b6eaeb5d494cf104ff163363151",
+      "bytes": 1355
+    },
+    {
+      "path": "scripts/gen_manifests.mjs",
+      "sha256": "31c3ac835ba0d3037be2a9ad8e0191dd67ade0432c55714db4122267a81b4522",
+      "bytes": 5484
     },
     {
       "path": "src/agent/qualify.ts",
