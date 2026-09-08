@@ -4,6 +4,22 @@ A B2B outbound lead pipeline you configure to your own ICP: Clutch and Crunchbas
 scraping, Apify intent signals, Clay enrichment over MCP, disqualifying gates, and
 a human approval step before any lead ships.
 
+## Install as an augment
+
+Hand any agent the repo URL and say install, or pick a package directly:
+
+- **Repo-link door:** `https://github.com/gabchess/prospector` plus "read
+  [START-HERE.md](START-HERE.md) and install". One document covers both hosts.
+- **Codex tree:** [codex/prospector/](codex/prospector/), the skill your agent
+  host loads. Guide: [docs/INSTALL-CODEX.md](docs/INSTALL-CODEX.md).
+- **Claude zip:** [claude/prospector-v0.2.0.zip](claude/prospector-v0.2.0.zip),
+  the same skill as a single-root archive. Guide:
+  [docs/INSTALL-CLAUDE.md](docs/INSTALL-CLAUDE.md).
+
+The skill packages are the door; the engine (`src/`) lives in this repo and is
+not bundled in either. A skill-only install gives your agent guidance and the
+exact commands. The scrapers need a clone.
+
 ## How it works
 
 | Step | Where | What it does |
@@ -52,6 +68,36 @@ Dead site, info@ only, nobody who owns sales. A row that trips one is out, and
 the row says which gate killed it. A binary gate can be debugged; a weighted
 score cannot. No lead is marked qualified without a person saying so.
 
+## Precision doctrine
+
+The rule the gates enforce: a vague spec makes a clean-running workflow ship
+garbage. "Find the email" is vague; "verified work email only, unverified gets
+flagged, never auto-sent" is precise, and every precise version already exists
+as code. The full mapping, vague instruction to real file path, plus a
+self-check for your own ICP edits:
+[codex/prospector/knowledge/precision-doctrine.md](codex/prospector/knowledge/precision-doctrine.md).
+
+## Docs
+
+| Doc | What it answers |
+|---|---|
+| [START-HERE.md](START-HERE.md) | The one door: host, install, dry run, first ask |
+| [docs/INSTALL-CODEX.md](docs/INSTALL-CODEX.md) | Installing the codex skill tree beside a repo clone |
+| [docs/INSTALL-CLAUDE.md](docs/INSTALL-CLAUDE.md) | Zip route and repo route for Claude hosts, and what the zip does not carry |
+| [docs/FIRST-RUN.md](docs/FIRST-RUN.md) | The five-minute fictional dry run and the first-ask ritual |
+| [docs/OPERATE-PROSPECTOR.md](docs/OPERATE-PROSPECTOR.md) | Run order, gate reading, and the per-run log |
+| [docs/EXAMPLE-WALKTHROUGH.md](docs/EXAMPLE-WALKTHROUGH.md) | One narrated dry run: sample CSV in, gate decisions, approval stop |
+| [docs/TRUST-PRIVACY-AND-AUTHORITY.md](docs/TRUST-PRIVACY-AND-AUTHORITY.md) | Why lead data never ships and what the approval gate protects |
+| [docs/VALIDATION-AND-LIMITS.md](docs/VALIDATION-AND-LIMITS.md) | What the tests prove, what they do not, and what email_status really means |
+| [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | Kill switches, null-rate aborts, Apify, Clay, and Playwright failures |
+| [docs/RECOVERY-AND-EXIT.md](docs/RECOVERY-AND-EXIT.md) | Resetting a run, re-entering any stage, and uninstalling |
+| [docs/EXTEND-YOUR-STACK.md](docs/EXTEND-YOUR-STACK.md) | Optional send and trigger tools downstream of the export CSV |
+| [docs/HUMAN-GAPS.md](docs/HUMAN-GAPS.md) | The decisions that stay human, and why each is a feature |
+| [HOST-MATRIX.md](HOST-MATRIX.md) | Which piece runs on which host, with honest evidence levels |
+| [PROVENANCE.md](PROVENANCE.md) | Where the repo came from and what is fixture data |
+| [CHANGELOG.md](CHANGELOG.md) | Release history |
+| [LICENSE-STATUS.md](LICENSE-STATUS.md) | What MIT covers here and what it does not |
+
 ## Three design calls the first run forced
 
 1. **Measure the source before building on it.** A 300-company Crunchbase scrape
@@ -70,13 +116,15 @@ score cannot. No lead is marked qualified without a person saying so.
 ```bash
 pnpm install
 npx playwright install chromium
-pnpm test                                # 42 tests green before you trust anything
+pnpm test                                # green before you trust anything
 pnpm scrape:clutch
 pnpm scrape:crunchbase                   # optional; needs .crunchbase.storageState.json from a logged-in session
 pnpm normalize                           # writes data/companies.csv
 pnpm finalize path/to/clay-export.csv    # writes data/leads_final.csv
 pnpm mcp                                 # the pipeline as an MCP server
 pnpm agent                               # reads data/companies.csv
+pnpm manifests                           # regenerate release + documentation manifests
+pnpm zip                                 # rebuild claude/prospector-v0.2.0.zip from the codex tree
 ```
 
 Dry-run on a fresh clone: `cp data/sample-companies.csv data/companies.csv` gives

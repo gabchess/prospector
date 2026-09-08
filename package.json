@@ -1,6 +1,6 @@
 {
   "name": "prospector",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,10 @@
     "mcp": "tsx src/mcp/server.ts",
     "agent": "tsx src/agent/qualify.ts",
     "normalize": "tsx src/pipeline/normalize.ts",
-    "finalize": "tsx src/pipeline/finalize.ts"
+    "finalize": "tsx src/pipeline/finalize.ts",
+    "manifests": "node scripts/gen_manifests.mjs",
+    "manifests:check": "node scripts/gen_manifests.mjs --check",
+    "zip": "node scripts/build_zip.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

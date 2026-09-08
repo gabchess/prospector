@@ -127,7 +127,7 @@ function buildCaptureTool(source: "crunchbase" | "clutch") {
   };
 }
 
-const server = new McpServer({ name: "prospector", version: "0.1.0" });
+const server = new McpServer({ name: "prospector", version: "0.2.0" });
 
 server.registerTool(
   "scrape_crunchbase",

@@ -28,7 +28,7 @@ Authored for the 0.2.0 augment cut:
 
 - The codex skill tree at `codex/prospector/` and the claude zip at
   `claude/prospector-v0.2.0.zip`, plus `scripts/build_zip.mjs`.
-- The `docs/` suite, `AGENTS.md`, `LICENSE-STATUS.md`, `CHANGELOG.md`, the
+- The `docs/` suite, `LICENSE-STATUS.md`, `CHANGELOG.md`, the
   T-NOVA one-pager, and the 0.2.0 upgrades to `START-HERE.md`,
   `HOST-MATRIX.md`, and `README.md`.
 - `scripts/gen_manifests.mjs`, the two manifests, and the manifest drift test.
