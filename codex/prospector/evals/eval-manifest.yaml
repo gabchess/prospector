@@ -1,0 +1,5 @@
+format: cd-augment-eval/v1
+product: prospector
+version: 0.2.0
+cases: core-transfer-cases.yaml
+claim_boundary: Synthetic case definitions have been authored; model behavior on a fresh host has not been executed or human-validated.

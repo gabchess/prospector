@@ -245,7 +245,7 @@ async function main(): Promise<void> {
   const { limit, approve } = parseArgs(process.argv.slice(2));
   await mkdir(path.dirname(LOG_PATH), { recursive: true });
 
-  const client = new Client({ name: "prospector-qualifier", version: "0.1.0" });
+  const client = new Client({ name: "prospector-qualifier", version: "0.2.0" });
   const transport = new StdioClientTransport({
     command: "npx",
     args: ["tsx", SERVER_ENTRY],

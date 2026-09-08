@@ -8,6 +8,7 @@ data/raw/*.csv
 data/raw/crunchbase.json
 data/raw/clutch.json
 data/agent-log.jsonl
+data/pending-approval.json
 data/companies.csv
 data/companies_signals.csv
 data/leads_final.csv

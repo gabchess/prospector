@@ -1,0 +1,43 @@
+Prospector v0.2.0
+
+WHAT IT IS
+
+Prospector is a B2B outbound lead pipeline an installer points at their own
+ICP. It scrapes public B2B directories (Clutch, Crunchbase), reads intent
+signals through Apify, enriches contacts through the installer's own Clay seat
+over MCP, and runs disqualifying gates on every row before anything reaches a
+human. It ships as a codex skill tree, a claude zip, and the engine repo
+behind them.
+
+THE COVENANT
+
+Every shipped row states what was checked and what was not. Email addresses
+pass syntax, a live DNS MX lookup, and a role-account check; email_status
+never says "valid" because no SMTP handshake runs. Gates disqualify, they
+never score: a binary gate can be debugged, a weighted score cannot. A CAPTCHA
+ends a run instead of being routed around. A null-rate check runs before any
+file write. Nothing is marked qualified without a person saying so.
+
+THE GATES
+
+- ICP gates in src/icp.ts: geo, headcount band, revenue ceiling, company
+  type. The test suite parses every gate, so a typo fails at pnpm test, not
+  mid-scrape.
+- Normalize gates in src/pipeline/normalize.ts: merge, dedupe by domain, drop
+  out-of-band rows, never invent a headcount midpoint.
+- Finalize gates in src/pipeline/finalize.ts: real DNS MX check, non-sales
+  titles dropped, every row schema-validated before the CSV is written.
+- Approval gate in src/agent/qualify.ts: leads below the score floor are
+  auto-rejected with reasons; leads at or above it wait for a human.
+
+WHAT IT NEVER DOES
+
+Send email. Buy data. Solve or bypass a CAPTCHA or login wall. Mark a lead
+qualified without a human. Ship anyone's personal data in the repo. Claim an
+SMTP verification it did not run.
+
+AUTHORITY
+
+The installer owns the keys, the seats, the ICP judgment, and every send
+decision. Prospector stops at the approval gate. Everything after that gate
+lives outside this repo.
