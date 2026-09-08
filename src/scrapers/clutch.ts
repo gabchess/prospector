@@ -316,7 +316,7 @@ async function assertPageSafe(page: Page): Promise<void> {
   if (looksBlocked(url, title, text)) {
     throw new KillSwitchError(
       "blocked",
-      `KILL SWITCH: Cloudflare/block on ${url} title=${title}. Headed attempt done. Apify memo23/apify-clutch-cheerio is the logged fallback — not firing it from here without a confirmed 403 + token. Stopping.`,
+      `KILL SWITCH: Cloudflare/block on ${url} title=${title}. Headed attempt done. Apify memo23/apify-clutch-cheerio is the logged fallback, not firing it from here without a confirmed 403 + token. Stopping.`,
     );
   }
 }
