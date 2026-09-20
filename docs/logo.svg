@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 427" width="640" height="427" role="img" aria-labelledby="title">
+  <title id="title">Prospector account research</title>
+  <!-- Portfolio mark: espresso medallion, taupe paper facets and a caramel accent.
+       Matches the existing project icon family. The lens marks the account under review. -->
+  <rect width="640" height="427" fill="#221e18"/>
+  <g fill="none" stroke="#827b6f" stroke-opacity="0.25" stroke-width="1">
+    <path d="M 560 -30 l 60.6 35 v 70 l -60.6 35 l -60.6 -35 v -70 z"/>
+    <path d="M 610 40 l 43.3 25 v 50 l -43.3 25 l -43.3 -25 v -50 z"/>
+    <path d="M 540 20 l 77.9 45 v 90 l -77.9 45 l -77.9 -45 v -90 z"/>
+  </g>
+  <circle cx="320" cy="214" r="139" fill="#221e18" stroke="#827b6f" stroke-opacity="0.6" stroke-width="1.5"/>
+  <path d="M 189.0 251.4 A 139 139 0 0 0 295.8 350.9" fill="none" stroke="#d4a574" stroke-opacity="0.5" stroke-width="1"/>
+  <path d="M 234 151 H 348 V 280 H 234 Z" fill="#827b6f"/>
+  <path d="M 255 133 H 374 V 260 H 255 Z" fill="#b8b0a4"/>
+  <path d="M 276 154 H 323 V 184 H 276 Z" fill="#827b6f"/>
+  <path d="M 278 207 H 348 M 278 226 H 326" fill="none" stroke="#827b6f" stroke-width="8"/>
+  <circle cx="365" cy="257" r="35" fill="#221e18" stroke="#d4a574" stroke-width="12"/>
+  <path d="M 390 282 L 413 306" fill="none" stroke="#d4a574" stroke-width="16"/>
+
+</svg>

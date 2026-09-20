@@ -8,7 +8,7 @@ const files = execFileSync(
   .split("\0")
   .filter(Boolean);
 const allowed =
-  /^(?:src\/[^/]+\.ts|tests\/[^/]+\.test\.ts|scripts\/check-public\.mjs|plugins\/prospector\/(?:\.codex-plugin\/plugin\.json|\.claude-plugin\/plugin\.json|skills\/prospector\/(?:SKILL\.md|(?:references|assets|examples)\/[a-z-]+\.md))|examples\/[a-z-]+\.json|\.agents\/plugins\/marketplace\.json|\.claude-plugin\/marketplace\.json|docs\/engine\.md|(?:README|CHANGELOG|HOST-MATRIX|LICENSE|PROVENANCE)\.md|\.gitignore|package\.json|pnpm-lock\.yaml|pnpm-workspace\.yaml|tsconfig\.json)$/;
+  /^(?:src\/[^/]+\.ts|tests\/[^/]+\.test\.ts|scripts\/check-public\.mjs|plugins\/prospector\/(?:\.codex-plugin\/plugin\.json|\.claude-plugin\/plugin\.json|skills\/prospector\/(?:SKILL\.md|(?:references|assets|examples)\/[a-z-]+\.md))|examples\/[a-z-]+\.json|\.agents\/plugins\/marketplace\.json|\.claude-plugin\/marketplace\.json|docs\/(?:engine\.md|logo\.svg)|(?:README|CHANGELOG|HOST-MATRIX|LICENSE|PROVENANCE)\.md|\.gitignore|package\.json|pnpm-lock\.yaml|pnpm-workspace\.yaml|tsconfig\.json)$/;
 let failed = false;
 for (const file of files) {
   let text;

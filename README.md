@@ -1,6 +1,16 @@
 # Prospector
 
-A B2B lead tool for GTM engineers.
+<p align="center">
+  <img src="docs/logo.svg" alt="Prospector mark" width="240" height="160">
+</p>
+
+<p align="center"><strong>A B2B lead tool for GTM engineers.</strong></p>
+
+<p align="center">
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.4.0-d4a574?labelColor=221e18" alt="version: 0.4.0"></a>
+  <a href="HOST-MATRIX.md"><img src="https://img.shields.io/badge/hosts-Codex%20%C2%B7%20Claude%20Code-d4a574?labelColor=221e18" alt="hosts: Codex · Claude Code"></a>
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-d4a574?labelColor=221e18" alt="license: MIT"></a>
+</p>
 
 Research accounts with your chosen tools, then review engaged opportunities and decide the next move.
 
