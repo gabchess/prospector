@@ -2,7 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { buildBatch, Lead, Profile } from "./model.js";
-const server = new McpServer({ name: "prospector", version: "0.3.0" });
+const server = new McpServer({ name: "prospector", version: "0.4.0" });
 server.registerTool(
   "assess_leads",
   {

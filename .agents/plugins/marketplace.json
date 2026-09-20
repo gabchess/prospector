@@ -1,0 +1,20 @@
+{
+  "name": "prospector",
+  "interface": {
+    "displayName": "Prospector"
+  },
+  "plugins": [
+    {
+      "name": "prospector",
+      "source": {
+        "source": "local",
+        "path": "./plugins/prospector"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

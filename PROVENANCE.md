@@ -1,7 +1,7 @@
 # Provenance
 
-Prospector 0.3 is an original B2B workflow implementation maintained by Gabriel Abreu. It replaces the fixed-profile pipeline with configurable evidence checks and an approval-bound export. Earlier releases remain available in Git history.
+Prospector is an original B2B workflow implementation maintained by Gabriel Abreu. It combines configurable lead research with opportunity review. Earlier releases remain available in Git history.
 
-The workflow combines account research with a limited opportunity review: observed facts, labelled hypotheses, engagement evidence and the next justified step. No third-party persona text, knowledge bundle, credentials or private lead data is included.
+Version 0.4 adapts workflow concepts from the maintainer's own sales augment into original instructions, a case template and a fictional example. It preserves evidence states, stakeholder review, alternative explanations, justified actions and dated updates. No source persona text, knowledge corpus, credentials or private lead data is included.
 
 Examples use fictional organizations and reserved example domains. Provider data remains subject to the user's agreements with each provider. Preserve required source attribution when using or sharing it.

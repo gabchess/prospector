@@ -1,0 +1,22 @@
+{
+  "name": "prospector",
+  "version": "0.4.0+codex.20260920130049",
+  "description": "B2B lead research and deal review for your AI agent.",
+  "author": {
+    "name": "Gabriel Abreu"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Prospector",
+    "shortDescription": "Research leads. Review active deals.",
+    "longDescription": "Find B2B leads with your chosen tools and review engaged opportunities with evidence, stakeholders and a clear next step.",
+    "developerName": "Gabriel Abreu",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Help me define my customer profile and find B2B leads.",
+      "Review this active opportunity and recommend the next move."
+    ]
+  }
+}

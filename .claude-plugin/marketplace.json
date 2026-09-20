@@ -1,0 +1,6 @@
+{
+  "name": "prospector",
+  "owner": { "name": "Gabriel Abreu" },
+  "metadata": { "description": "B2B lead research and deal review." },
+  "plugins": [{ "name": "prospector", "source": "./plugins/prospector", "description": "B2B lead research and deal review for your AI agent." }]
+}

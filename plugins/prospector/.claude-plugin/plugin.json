@@ -1,0 +1,10 @@
+{
+  "name": "prospector",
+  "version": "0.4.0",
+  "description": "B2B lead research and deal review for your AI agent.",
+  "author": {
+    "name": "Gabriel Abreu"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}
