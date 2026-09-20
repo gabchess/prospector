@@ -1,0 +1,8 @@
+{
+  "name": "prospector",
+  "version": "0.3.0",
+  "description": "Research B2B accounts, check evidence and review a lead shortlist with your chosen tools.",
+  "author": { "name": "Gabriel Abreu" },
+  "license": "MIT",
+  "skills": "./skills/"
+}

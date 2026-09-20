@@ -1,0 +1,8 @@
+{
+  "name":"Fictional operations consultancy",
+  "offer":"Build workflow automations for small manufacturers",
+  "countries":["BR","PT"],"industries":["manufacturing"],
+  "minEmployees":5,"maxEmployees":500,"targetRoles":["Operations Director","Owner"],
+  "sources":["fixture"],"maxLeads":10,"maxEvidenceAgeDays":90,
+  "acceptedEmailStatuses":["mx_ok","provider_verified"],"excludedDomains":[]
+}

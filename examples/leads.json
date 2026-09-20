@@ -1,0 +1,4 @@
+[
+  {"company":"Fixture Works","domain":"fixture.example","country":"BR","industry":"manufacturing","employees":42,"source":"fixture","contact":{"name":"Sample Person","role":"Operations Director","email":"sample@fixture.example","emailStatus":"unknown"},"evidence":[{"field":"company","value":"Fixture Works","status":"observed","source":"fixture","url":"https://fixture.example/about","capturedAt":"2026-09-20T12:00:00Z"}]},
+  {"company":"Sample Factory","domain":"factory.example","country":"PT","industry":"manufacturing","employees":12,"source":"fixture","suppressed":true,"evidence":[]}
+]

@@ -1,19 +1,16 @@
 {
   "name": "prospector",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "vitest run",
-    "scrape:crunchbase": "tsx src/scrapers/crunchbase.ts",
-    "scrape:clutch": "tsx src/scrapers/clutch.ts",
-    "mcp": "tsx src/mcp/server.ts",
-    "agent": "tsx src/agent/qualify.ts",
-    "normalize": "tsx src/pipeline/normalize.ts",
-    "finalize": "tsx src/pipeline/finalize.ts",
-    "manifests": "node scripts/gen_manifests.mjs",
-    "manifests:check": "node scripts/gen_manifests.mjs --check",
-    "zip": "node scripts/build_zip.mjs"
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build:leads": "tsx src/cli.ts build",
+    "review": "tsx src/cli.ts review",
+    "export:leads": "tsx src/cli.ts export",
+    "mcp": "tsx src/mcp.ts",
+    "check:public": "node scripts/check-public.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
@@ -21,9 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
-    "playwright": "^1.58.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.6.0",
-    "vitest": "^3.2.0"
+    "typescript": "^5.6.0"
   }
 }
